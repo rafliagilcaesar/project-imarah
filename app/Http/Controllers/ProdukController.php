@@ -63,7 +63,7 @@ class ProdukController extends Controller
 
     public function edit($id)
     {
-        $produk = Produk::with('kategori')->findOrFail($id);
+        $produk = Produk::with('kategoriNama')->findOrFail($id);
         $kategoris = Kategori::all();
         return view('produk.edit', compact('produk', 'kategoris'));
     }
