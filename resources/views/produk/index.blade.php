@@ -24,7 +24,7 @@
            <td>{{ $loop->iteration }}</td>
            <td>{{ $produk->nama_produk }}</td>
            <td>{{ $produk->harga }}</td>
-           <td>{{ $produk->kategori }}</td>
+           <td>{{ $produk->kategoriNama->nama_kategori }}</td>
            <td>
                <a href="{{ route('produk.edit', $produk->id) }}" class="btn btn-sm btn-warning">Edit</a>
                <a href="{{ route('produk.show', $produk->id) }}" class="btn btn-sm btn-info">Lihat</a>

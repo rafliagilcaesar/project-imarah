@@ -44,7 +44,7 @@
 
                         <dt class="col-sm-4">Kategori</dt>
                         <dd class="col-sm-8">
-                            {{ optional($produk->kategori)->nama_kategori ?? '-' }}
+                            {{ optional($produk->kategoriNama)->nama_kategori ?? '-' }}
                         </dd>
 
                         <dt class="col-sm-4">Dibuat</dt>

@@ -12,7 +12,7 @@ class ProdukController extends Controller
 {
     public function index()
     {
-        $produks = Produk::all();
+        $produks = Produk::with('kategoriNama')->get();
         return view('produk.index', compact('produks'));
     }
 
@@ -56,7 +56,7 @@ class ProdukController extends Controller
 
     public function show($id)
     {
-        $produk = Produk::with('kategori')->findOrFail($id);
+        $produk = Produk::with('kategoriNama')->findOrFail($id);
 
         return view('produk.show', compact('produk'));
     }
